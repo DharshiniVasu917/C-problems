@@ -1,0 +1,21 @@
+#include <stdio.h>
+int reverse(int n,int rev,int rem){
+    rev=0;
+    for(int i=n;n!=0;n=n/10){
+        rem=n%10;
+        rev=(rev*10)+rem;
+        
+    }
+    return rev;
+    
+}
+
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    int rev;
+    int rem;
+    printf("%d",reverse(n,rev,rem));
+    return 0;
+}
