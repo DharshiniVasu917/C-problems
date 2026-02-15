@@ -1,0 +1,26 @@
+#include<stdio.h>
+void number(int n,int rem){
+    int palin=0;
+    rem=0;
+    int num=n;
+    while(n!=0){
+        rem=(rem*10)+n%10;
+        n=n/10;
+    }
+    if(num!=rem){
+        palin=1;
+    }
+    
+    if(palin==0){
+        printf("Palindrome");
+    }
+    else{
+        printf("Not Palindrome");
+    }
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    int rem;
+    number(n,rem);
+}
